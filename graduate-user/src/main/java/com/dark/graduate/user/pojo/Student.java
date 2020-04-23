@@ -3,8 +3,9 @@ package com.dark.graduate.user.pojo;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 @Data
 public class Student {
@@ -25,7 +26,8 @@ public class Student {
 
     private String Country;
 
-    private LocalDate Regist;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date Regist;
 
     private String Province;
 

@@ -2,7 +2,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3307/graduate_user?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3307/graduate_lesson?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false
     username: root
     password: 123456
     druid:
@@ -23,11 +23,11 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
   application:
-    name: graduate-user
+    name: graduate-lesson
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
-  typeAliasesPackage: com.dark.graduate.user.pojo
+  typeAliasesPackage: com.dark.graduate.lesson.pojo
   global-config:
     db-config:
       id-type: auto
@@ -35,9 +35,9 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
 
-
 logging:
   level:
     com.dark.graduations.mapper: debug
+
 server:
-  port: 8081
+  port: 8082
